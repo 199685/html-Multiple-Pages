@@ -1,0 +1,103 @@
+body {
+    position: relative;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.header {
+    background: rgba(82, 77, 77, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    @include smb() {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logo {
+        margin-left: $ms;
+
+        @include smb() {
+            width: 100%;
+            margin-left: 0;
+            margin-top: $ms;
+            h1 {
+                display: flex;
+                justify-content: center;
+            }
+        }
+        a {
+            width: 180px;
+            height: 40px;
+            display: block;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap;
+            background: url(../../images/logo.png) no-repeat;
+        }
+    }
+
+    .menu {
+        display: flex;
+        margin-right: $ms;
+        @include smb() {
+            margin-left: $ms;
+        }
+        li {
+            a {
+                text-decoration: none;
+                margin-right: $ms;
+                color: $accent1;
+                padding: 1em 0;
+                display: block;
+                border-bottom: 5px solid transparent;
+                transition: all 0.5s;
+
+                &:hover {
+                    color: $primary2;
+                    border-bottom: 5px solid $primary2;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background: $primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 0;
+    @include smb() {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-logo {
+        margin-left: $ms;
+        @include smb() {
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            margin-left: 0;
+        }
+        p {
+            color: $accent;
+            font-size: $fs;
+            text-align: right;
+            @include smb() {
+                text-align: center;
+                margin-bottom: $ms;
+            }
+        }
+    }
+
+    .social {
+        margin-right: $ms;
+        a {
+            margin-right: $ms;
+        }
+        @include smb() {
+            margin: 0;
+        }
+    }
+}

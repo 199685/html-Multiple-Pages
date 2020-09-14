@@ -1,0 +1,243 @@
+.index {
+    .wrap {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .menu {
+        li {
+            &:nth-child(1) {
+                a {
+                    color: $primary2;
+                    border-bottom: 5px solid $primary2;
+                }
+            }
+        }
+    }
+
+    .banner {
+        background: url(../../images/bg_index.png);
+        background-size: cover;
+        margin-bottom: $mb;
+        .banner-text {
+            padding: 180px 0 135px 0;
+            margin-left: $ms;
+            @include sm() {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 160px 0 $pb 0;
+                margin-right: $ms;
+            }
+
+            p {
+                font-size: $fb1;
+                color: $primary2;
+                margin-bottom: $md;
+                @include sm() {
+                    font-size: $fb;
+                }
+            }
+
+            span {
+                color: $accent1;
+            }
+            input {
+                background: $primary2;
+                color: $accent1;
+                padding: $ps * 1.5 $pb * 2;
+                border-radius: 5px;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .couse-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $md;
+        @include pad() {
+            justify-content: space-around;
+        }
+        @include sm() {
+        }
+        .couse-title {
+            display: flex;
+            align-items: center;
+            padding-left: $ps;
+            @include sm() {
+                flex-wrap: wrap;
+            }
+            h3 {
+                font-size: $fb;
+                padding-right: $pd;
+                color: $primary2;
+            }
+            p {
+                color: $primary1;
+            }
+        }
+        .btn {
+            input {
+                color: $primary2;
+                outline: none;
+                border-radius: 5px;
+                cursor: pointer;
+                border: 2px solid $primary2;
+                background: $accent1;
+                padding: $ps * 0.3;
+            }
+            @include sm() {
+                padding-right: $ps;
+            }
+        }
+    }
+
+    .couse-item {
+        display: flex;
+        @include pad() {
+            justify-content: space-around;
+        }
+        @include sm() {
+            flex-wrap: wrap;
+        }
+        li {
+            padding: $ps;
+            border: 1px solid $accent;
+            box-shadow: 0 0 5px 3px $accent;
+
+            &:nth-child(2) {
+                margin: 0 $ms;
+            }
+            > p {
+                color: $primary1;
+            }
+            @include pad() {
+                &:nth-child(1) {
+                    margin-left: $ms;
+                }
+                &:nth-child(3) {
+                    margin-right: $ms;
+                }
+            }
+            @include sm() {
+                width: 70%;
+                margin-bottom: $ms;
+                &:nth-child(1),
+                &:nth-child(3) {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                &:nth-child(2) {
+                    margin-bottom: $ms;
+                }
+            }
+        }
+
+        .item-title {
+            text-align: center;
+        }
+        margin-bottom: $mb;
+    }
+
+    .compare {
+        .title {
+            display: flex;
+            align-items: center;
+            margin-bottom: $md;
+            @include pad {
+                justify-content: center;
+            }
+            @include sml {
+                flex-wrap: wrap;
+            }
+            h2 {
+                color: $primary2;
+                font-size: $fb;
+                padding-right: $ps;
+            }
+            p {
+                color: $primary1;
+            }
+        }
+        table {
+            width: 100%;
+            text-align: center;
+            td,
+            th {
+                padding: $ps 0;
+            }
+            th {
+                background: $accent;
+            }
+            tr {
+                border-bottom: 2px solid $accent;
+            }
+            .color {
+                color: $primary2;
+            }
+            margin-bottom: $mb;
+        }
+    }
+
+    .data {
+        position: relative;
+        background: $primary1;
+        padding: 130px $pd;
+        @include smb() {
+            padding: 65px $pd;
+        }
+        .data-text {
+            display: flex;
+            justify-content: space-between;
+            @include smb() {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            p {
+                line-height: 2em;
+                font-size: $fb;
+                @include smb() {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+                @include sm() {
+                    font-size: $fd * 1.5;
+                }
+            }
+            from {
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                @include sm() {
+                    width: 100%;
+                }
+                input {
+                    margin-bottom: $ms;
+                    padding: $ps 0;
+                    padding-left: $ps;
+                    font-size: $fd;
+                    border: 1px solid $accent;
+                    border-radius: 3px;
+                    outline: none;
+                }
+            }
+        }
+        input[type="button"] {
+            position: absolute;
+            right: $pd;
+            background: $primary2;
+            padding: $ps $pb;
+            border-radius: 5px;
+            color: $accent1;
+            outline: none;
+            cursor: pointer;
+            @include smb() {
+                right: 0;
+                left: 0;
+                margin: auto;
+            }
+        }
+    }
+}

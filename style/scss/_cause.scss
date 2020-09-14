@@ -1,0 +1,218 @@
+.cause-page {
+    .wrap {
+        max-width: 620px;
+        margin: 0 auto;
+    }
+    .menu {
+        li {
+            &:nth-child(2) {
+                a {
+                    color: $primary2;
+                    border-bottom: 5px solid $primary2;
+                }
+            }
+        }
+    }
+
+    .banner {
+        background: url(../../images/bg_course.png);
+        background-size: cover;
+        margin-bottom: $mb;
+        .banner-title {
+            display: flex;
+            justify-content: space-between;
+            padding: 185px $pd 0 $pd;
+            align-items: flex-end;
+            @include pad() {
+                justify-content: center;
+            }
+
+            h3 {
+                font-size: $fb1;
+                color: $accent1;
+                @include sm() {
+                    font-size: $fb;
+                }
+                @include sml() {
+                    font-size: $fb;
+                }
+            }
+            p {
+                font-size: $fd;
+                color: $primary2;
+            }
+        }
+        .banner-img {
+            transform: translateY(-70px);
+            @include pad() {
+                display: none;
+            }
+        }
+        .btn {
+            padding: $pd $pd 180px $pd;
+            @include pad() {
+                text-align: center;
+                padding-bottom: 90px;
+            }
+            @include sm() {
+                padding-bottom: 45px;
+            }
+            @include sml() {
+                padding-bottom: 0px;
+            }
+            input[type="button"] {
+                padding: $ps $pd;
+                background: $primary2;
+                color: $accent1;
+                outline: none;
+                border-radius: 5px;
+                font-size: $fd;
+                transform: translateY(-50px);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .teacher {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $mb;
+        @include pad() {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .teacher-img {
+            @include pad() {
+                width: 50%;
+            }
+            @include sm() {
+                margin-bottom: $ms;
+                display: flex;
+                justify-content: flex-end;
+            }
+            img {
+                @include sm() {
+                    width: 80%;
+                }
+            }
+        }
+        p {
+            color: $primary2;
+            font-size: $fb;
+            @include pad() {
+                width: 50%;
+                text-align: center;
+            }
+            span {
+                color: $primary;
+            }
+        }
+        ul {
+            list-style-type: initial;
+            color: $primary1;
+        }
+    }
+
+    .special {
+        margin-bottom: $mb;
+        @include sm() {
+            padding: 0 $pd;
+        }
+        .special-title {
+            margin-bottom: $md;
+
+            p {
+                font-size: $fb;
+                color: $primary2;
+            }
+            span {
+                font-size: $fd;
+                color: $primary1;
+                padding-left: $ps;
+                @include sml() {
+                    display: block;
+                }
+            }
+        }
+        ol {
+            margin-left: 22.25px;
+        }
+        li {
+            list-style-type: decimal;
+            list-style-position: outside;
+            padding-left: $ps;
+            font-size: $fd;
+        }
+    }
+
+    .cause {
+        margin-bottom: $mb;
+        .cause-title {
+            @include sm() {
+                text-align: center;
+            }
+            margin-bottom: $ms;
+            p {
+                font-size: $fb;
+                color: $primary2;
+            }
+            span {
+                font-size: $fd;
+                padding-left: $ps;
+                color: $primary1;
+                @include sml() {
+                    display: block;
+                }
+            }
+        }
+        .item {
+            li {
+                padding: $ps;
+                &:nth-child(odd) {
+                    background: $accent;
+                }
+                &:nth-child(even) {
+                    color: $primary1;
+                }
+            }
+        }
+    }
+
+    .join {
+        background: $accent;
+        .join-text {
+            display: flex;
+            justify-content: center;
+            padding: 160px 0 150px 0;
+            @include sm() {
+                padding: 60px 0;
+                flex-wrap: wrap;
+            }
+            p {
+                margin-right: $md;
+                font-size: $fb;
+                @include sm() {
+                    margin-right: 0;
+                    padding-bottom: $ps;
+                }
+                @include sml() {
+                    font-size: $fd;
+                }
+            }
+        }
+        .btn {
+            display: flex;
+            align-items: flex-end;
+        }
+        input[type="button"] {
+            padding: $ps $pd;
+            background: $primary2;
+            color: $accent1;
+            outline: none;
+            border-radius: 5px;
+            font-size: $fd;
+            cursor: pointer;
+        }
+    }
+}

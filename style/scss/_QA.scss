@@ -1,0 +1,148 @@
+.QA-page {
+    .wrap {
+        max-width: 780px;
+        margin: 0 auto;
+    }
+    .menu {
+        li {
+            &:nth-child(3) {
+                a {
+                    color: $primary2;
+                    border-bottom: 5px solid $primary2;
+                }
+            }
+        }
+    }
+
+    .banner {
+        background: url(../../images/bg_QA.png);
+        background-size: cover;
+        text-align: center;
+        padding: 185px 0 190px 0;
+        margin-bottom: $mb;
+        @include smb() {
+            padding-bottom: 90px;
+        }
+        @include sm() {
+            padding-bottom: 45px;
+        }
+
+        .banner-title {
+            margin-bottom: $md;
+        }
+        p {
+            font-size: $fb1;
+            color: $accent1;
+            @include sml() {
+                font-size: $fd;
+            }
+        }
+        span {
+            color: $primary2;
+            font-size: $fd;
+        }
+
+        input[type="search"] {
+            width: 60%;
+            height: 50px;
+            border-radius: 5px;
+            outline: none;
+            font-size: $fd;
+            cursor: pointer;
+            @include sm() {
+                width: 90%;
+                margin-left: 5%;
+            }
+        }
+        .btn {
+            @include sm() {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .fa-search {
+            transform: translateX(-30px);
+            cursor: pointer;
+        }
+    }
+    .title {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: $md;
+        @include pad() {
+            padding-left: $pd;
+        }
+        @include smb() {
+            flex-wrap: wrap;
+        }
+        p {
+            padding-left: $pd;
+            color: $primary1;
+            @include smb() {
+                width: 100%;
+                padding: 0;
+            }
+        }
+        h3 {
+            font-size: $fb;
+            color: $primary2;
+        }
+    }
+    .item {
+        h4 {
+            font-size: $fd;
+        }
+        p {
+            color: $primary1;
+            font-size: $fs;
+            margin-bottom: $md;
+        }
+        span {
+            color: $primary2;
+        }
+        @include pad() {
+            padding: 0 $pd;
+        }
+    }
+    .cash-item {
+        &.item {
+            ul {
+                margin-bottom: $md;
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+        li {
+            list-style-type: decimal;
+            list-style-position: inside;
+            font-size: $fs;
+            padding-left: $pb;
+            color: $primary1;
+        }
+    }
+
+    .refund-item {
+        &.item {
+            ul {
+                margin-bottom: $md;
+                p {
+                    margin: 0;
+                }
+            }
+        }
+        li {
+            list-style-type: initial;
+            list-style-position: inside;
+            font-size: $fs;
+            padding-left: $pb;
+            color: $primary1;
+        }
+        .black {
+            color: $primary;
+            margin: 0;
+        }
+    }
+}
